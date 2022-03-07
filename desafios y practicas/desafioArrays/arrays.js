@@ -1,32 +1,37 @@
 const productos = [{
     id:1,
     nombre: "CAMISETAS",
-    cantidad: "12",
-    precio: "300"
+    imagen: "imagenes/laamistad.png",
+    cantidad: 1,
+    precio: 300
 },
 {
     id:2,
     nombre: "SHORTS",
-    cantidad: "5",
-    precio: "250"
+    imagen: "imagenes/lacoronilla.jpeg",
+    cantidad: 1,
+    precio: 250
 },
 {
     id:3,
     nombre: "CAMPERAS",
-    cantidad: "8",
-    precio: "400"
+    imagen: "imagenes/equipwanderers.jpeg",
+    cantidad: 1,
+    precio: 400
 },
 {
     id:4,
     nombre: "PANTALONES",
-    cantidad: "8",
-    precio: "400"
+    imagen: "imagenes/cartoneros.jpg",
+    cantidad: 1,
+    precio: 400
 },
 ];
 const prods = [ ]
 let productoIngresado
 
 const search = () => {
+    alert("Stock: Camisetas, Shorts, Camperas, Pantalones")
     let filtro = prompt("¿Que desea comprar?  Para salir presione listo").toUpperCase();
     if (filtro === "listo") { } else {
         productoIngresado = productos.find(element => element.nombre === filtro)
@@ -38,12 +43,12 @@ const search = () => {
         if (productoIngresado) prods.push(productoIngresado)
     }
     if (prods.length > 0){
-        const mapeo = prods.map(p =>{
+        const mapeo = prods.map(p =>{ 
             document.write(`
                         <ul>
-                        <li>Nombre: ${p.nombre}</li>
+                        <li>Nombre: ${p.nombre}</li> 
                         <li>Stock : ${p.cantidad}</li>
-                        <li>Precio : ${p.precio}</li>
+                        <li>Precio : ${p.precio}</li><li> <img src="${p.imagen}"></li>
                         </ul>
                         `)
         })
