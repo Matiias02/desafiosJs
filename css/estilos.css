@@ -1,0 +1,87 @@
+
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    /* text-align: center; */
+}
+
+.carrito{
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    /* text-align: center;  */
+}
+
+button{
+    border: 0;
+    background-color: burlywood;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* float: right; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button:hover{
+    background-color: cadetblue;
+    transition: 1s;
+}
+
+/* .camisetas{
+    padding-right: 120px;
+} */
+
+.modalContainer{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    width: 40%;
+    height: 40%;
+    background: white;
+    color: rgb(37, 121, 124);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    transition:  1s;
+    transform: translateY(0%);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow: hidden; */
+}
+
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: rgb(173, 2, 2);
+    color: white;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.modalClose{
+    /* transform: translateY(-200%); */
+}
+

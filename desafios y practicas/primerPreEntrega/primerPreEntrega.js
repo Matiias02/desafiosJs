@@ -27,34 +27,49 @@ const productos = [{
     precio: 400
 },
 ];
-const prods = [ ]
-let productoIngresado
 
-const search = () => {
-    alert("Stock: Camisetas, Shorts, Camperas, Pantalones")
-    let filtro = prompt("¿Que desea comprar?  Para salir presione listo").toUpperCase();
-    if (filtro === "listo") { } else {
-        productoIngresado = productos.find(element => element.nombre === filtro)
-        while (!productoIngresado) {
-            filtro = prompt("¿Que desea comprar? , para salir presione listo").toUpperCase();
-            if (filtro === "listo") break
-            productoIngresado = productos.find(element => element.nombre === filtro) 
-        }
-        if (productoIngresado) prods.push(productoIngresado)
-    }
-    if (prods.length > 0){
-        const mapeo = prods.map(p =>{ 
-            document.write(`
-                        <ul>
-                        <li>Nombre: ${p.nombre}</li> 
-                        <li>Stock : ${p.cantidad}</li>
-                        <li>Precio : ${p.precio}</li><li> <img src="${p.imagen}"></li>
-                        </ul>
-                        `)
-        })
-    } else {
-        const mapeo = document.write(`<h1> Hasta luego! </h1>`)
-    }
+let producto = prompt("¿que producto desea comprar? Camisetas, Pantalones, Shorts, Camperas");
+let camisetas = 200;
+let shorts = 140;
+let camperas = 1000;
+let pantalones = 50; 
+let tome = (" Gracias!, aqui esta su compra")
+
+
+while(producto != ""){
+	switch(producto.toUpperCase()){
+		case "CAMISETAS":
+			let cantidad = prompt("¿cuantas desea comprar?")
+			const pTotal1 = ("el precio total es de: " + camisetas*cantidad + "$")
+			alert(pTotal1)
+			alert(tome)
+			producto = prompt("¿que producto desea comprar? Camisetas, Pantalones, Shorts, Camperas")
+		break
+		case "SHORTS":
+			let cantidad2 = prompt("¿cuantos desea comprar?")
+			const pTotal2 = ("el precio total es de: " + shorts*cantidad2 + "$")
+			alert(pTotal2)
+			alert(tome)
+			producto = prompt("¿que producto desea comprar? Camisetas, Pantalones, Shorts, Camperas")
+		break
+		case "CAMPERAS":
+			let cantidad3 = prompt("¿cuantas desea comprar?")
+			const pTotal3 = ("el precio total es de: " + camperas*cantidad3 + "$")
+			alert(pTotal3)
+			alert(tome)
+			producto = prompt("¿que producto desea comprar? Camisetas, Pantalones, Shorts, Camperas")
+		break
+		case "PANTALONES":
+			let cantidad4 = prompt("¿cuantos desea comprar?")
+			const pTotal4 = ("el precio total es de: " + pantalones*cantidad4 + "$")
+			alert(pTotal4)
+			alert(tome)
+			producto = prompt("¿que producto desea comprar? Camisetas, Pantalones, Shorts, Camperas")
+		break
+		default:
+			alert("Ese producto no esta a la venta")
+			producto = prompt("¿que producto desea comprar? Camisetas, Pantalones, Shorts, Camperas")
+	}
 }
 
-search()
+let iva = producto.map(el => el.precio += 21)
