@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar al carrito</title>
     <!-- JAVASCRIPT -->
-    <script src="desafios y practicas/primerPreEntrega/primerPreEntrega.js"></script>
+    <script src="desafios y practicas/desafioEventos/eventos.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -17,30 +17,23 @@
         </h1>
 
         <div id="lista">
-            <li class="camisetas">Camisetas</li>  <button onclick="boton()" class="cta">Agregar al carrito</button>
-            <li>Shorts</li>     <button onclick="boton()" class="cta">Agregar al carrito</button>
-            <li>Pantalones</li> <button onclick="boton()" class="cta">Agregar al carrito</button>
-            <li>Camperas</li>   <button onclick="boton()" class="cta">Agregar al carrito</button>
+            <li class="camisetas">Camisetas</li>  <a href="javascript: abrir()">Agregar al carrito</a>
+            <li>Shorts</li>     <a href="javascript: abrir()">Agregar al carrito</a>
+            <li>Pantalones</li> <a href="javascript: abrir()">Agregar al carrito</a>
+            <li>Camperas</li>   <a href="javascript: abrir()">Agregar al carrito</a>
         </div>
     </section>
-    <!-- <section>
-        <div class="modalContainer">
-            <div class="modal modalClose">
-                <p class="close">X</p>
-                <div class="modalTexto">
-                    <h2>Se agrego este producto al carrito</h2>
-                    <p>Muchas gracias por su compra!</p>
-                </div>
-            </div>
-
-        </div>
-    </section> 
     
-
-    <h1>Stock de productos</h1>
-    <li>Pantalones</li>
-    <li>Camisetas</li>
-    <li>Shorts</li>
-    <li>Camperas</li> -->
+    
+    <div class="modalContainer" id="ventana">
+        <div class="modal modalClose">
+            <a href="javascript:cerrar()"><p class="close">X</p></a>
+            <div class="modalTexto">
+                <h2>Se agrego este producto al carrito</h2>
+                <p>Muchas gracias por su compra!</p>
+            </div>
+        </div>
+    </div> 
+    
 </body>
 </html>

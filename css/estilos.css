@@ -44,10 +44,9 @@ button:hover{
     z-index: 1000;
     width: 100%;
     height: 100vh;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
+    top: 20%;
+    left: 35%;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -55,7 +54,7 @@ button:hover{
 .modal{
     width: 40%;
     height: 40%;
-    background: white;
+    background: lightgray;
     color: rgb(37, 121, 124);
     text-align: center;
     display: flex;
@@ -70,7 +69,7 @@ button:hover{
 
 .close{
     position: absolute;
-    top: 5px;
+    top: 2px;
     right: 5px;
     display: block;
     width: 25px;
@@ -80,8 +79,5 @@ button:hover{
     line-height: 25px;
     cursor: pointer;
     border-radius: 5px;
-}
-.modalClose{
-    /* transform: translateY(-200%); */
 }
 
